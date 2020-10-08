@@ -1,0 +1,68 @@
+TASKS:
+* code:
+    * ExplosionEffect- fix force calculation so MAX_FORCE will really be the max
+    * HitControl- Make a smarter way to get contactType
+    
+
+* sounds/visuals:
+    * Faces
+    
+    * better background
+
+
+* UI:
+    * preferences tab to edit keys, sound volume
+    * control settings- button with text showing current key
+        press button to show "press key"
+        make sure pressing "esc" won't close tab and that it cannot be assigned
+        have all button texts linked to preferenceData, make sure to update them
+        after a Set function
+    
+    * credits
+    
+
+    
+
+* gameplay:
+    * rope/hook
+        * Make hook attached joint have strong springs to keep it stuck
+        * optimal break force might be around 10k-15k for hook joint
+        * when hook is attached to ground, going up will disconnect the rope. figure out a way to fix this.
+        * in general increase rope spring strength
+    * more interesting map, obstacles, moving parts, colors etc..
+    
+    
+
+* bugs:
+    * In-game, sword gets crooked for some reason
+    * In-game, gravity sphere not affected by gravity?
+    * after restart one started turned, I think after he died - CHECK
+
+    
+
+SOUNDS NEEDED:
+1. egg hit hard surface
+2. sword out (weak and short, could be repeated quickly)
+3. jets (might want to find a way to slightly randomize output)
+4. sword hit egg
+5. egg explode
+6. bgm
+
+
+
+DONE:
+* when dead, disable sword and jets
+* Egg location = Actual player location, not the parent location. need to fix the "Birth" and effect locations somehow
+* jets should be children of egg, not fixed joints
+* basic UI to start game and exit game
+* Colors
+* Optimal force for jets probably around 500-550
+* change player data to be an array, using player ID as index
+* same goes for PlayerManager
+* maybe max lives will be 11 because it's max spare lives, otherwise I need to remove 1 life at each birth and not at each death
+* Update lives amount after restart
+* SOUNDS!!
+* How To Play on main menu
+* audio needs mute "check" and volume bar, later on add bars and mutes
+        for different sounds (effects, BGM, voices etc)
+* PLAYER X WINS message, button to return to main menu
